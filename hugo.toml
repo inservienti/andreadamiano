@@ -1,0 +1,7 @@
+baseURL = "https://inservienti.github.io/andreadamiano/"
+languageCode = "de-CH"
+title = "Andrea Damiano — Interaktiver Lebenslauf"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[params]
+  description = "Interaktiver Lebenslauf von Andrea Damiano — Prozessleitung, Auftragsabwicklung, Exportlogistik und IT-Dienstleistungen."
