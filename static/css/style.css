@@ -175,6 +175,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--orange); outlin
 .network-node.n1 { left: 8%; top: 9%; }.network-node.n2 { left: calc(50% - 33px); top: 0; }.network-node.n3 { right: 6%; top: 10%; }
 .network-node.n4 { right: 4%; bottom: 8%; }.network-node.n5 { left: calc(50% - 33px); bottom: 0; }.network-node.n6 { left: 5%; bottom: 8%; }
 .network-copy { margin: 0 auto!important; min-height: 38px; max-width: 560px; color: #a8c9dd!important; text-align: center; font-size: 13px!important; }
+.it-badges { display: flex; justify-content: center; gap: 7px; flex-wrap: wrap; margin: 5px auto 0; max-width: 650px; }
+.it-badges span { padding: 6px 10px; border: 1px solid rgba(52,183,255,.22); border-radius: 999px; background: rgba(3,18,29,.76); color: #7faac3; font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .skill-orbit { width: min(500px,58vh); aspect-ratio: 1; margin: 16px auto 0; position: relative; border: 1px solid rgba(56,178,251,.18); border-radius: 50%; animation: orbitGlow 4s ease-in-out infinite; }
 .skill-orbit::before, .skill-orbit::after { content:""; position:absolute; border-radius:50%; border:1px dashed rgba(255,138,22,.16); inset:15%; }
 .skill-orbit::after { inset: 31%; border-color: rgba(56,178,251,.15); }
@@ -240,6 +242,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--orange); outlin
   .focus-head h2 { font-size: 43px; }
   .language-grid { grid-template-columns:1fr;gap:7px;margin-top:14px; }.language-grid div{padding:11px}.language-grid b{font-size:14px}.language-grid div>span{margin:8px 0 5px}
   .network-map { height:300px; transform:scale(.85); transform-origin:center; }
+  .it-badges { margin-top: -13px; }
   .skill-orbit { width:min(74vw,360px); }.skill-orbit button{transform:rotate(var(--a)) translateY(calc(-1 * min(34vw,145px))) rotate(calc(-1 * var(--a)));width:94px;left:calc(50% - 47px);font-size:7px;}
 }
 
@@ -249,6 +252,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--orange); outlin
   .stage { min-height: 390px; }
   .detail-period { margin-top:25px; }.detail-panel h2{font-size:38px}
   .profile-focus p { font-size:14px; }.network-node{width:54px;height:54px}.network-node.core{width:82px;height:82px;left:calc(50% - 41px);top:calc(50% - 41px)}
+  .it-badges { gap: 5px; margin-top: -22px; }
+  .it-badges span { padding: 5px 7px; font-size: 7px; }
   .compact-sheet h2{font-size:34px}.compact-row{grid-template-columns:72px 1fr}.compact-columns{grid-template-columns:1fr;gap:5px}
 }
 

@@ -47,7 +47,7 @@ const timelineRail = $('#timelineRail');
 const compactDialog = $('#compactDialog');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let selectedIndex = experiences.length - 1;
-let currentSection = 'career';
+let currentSection = 'it';
 
 // ---------- UI content ----------
 function updateDetail(index, animate = true) {
@@ -328,6 +328,7 @@ function activateSection(section) {
   currentSection=section;
   $$('.nav-pill').forEach(button=>button.classList.toggle('active',button.dataset.section===section));
   const isCareer=section==='career';stage.classList.toggle('alt-mode',!isCareer);detailPanel.classList.toggle('dimmed',!isCareer);timelineRail.classList.toggle('hidden',!isCareer);
+  $('#stageCounter').hidden=!isCareer;
   $$('.focus-section').forEach(el=>{const visible=el.id===`${section}Section`;el.classList.toggle('visible',visible);el.setAttribute('aria-hidden',String(!visible));});
   $('#stageKicker').textContent=isCareer?'Beruflicher Weg':section==='profile'?'Persönliches Profil':section==='it'?'Digitales Profil':'Arbeitsweise';
 }
@@ -345,4 +346,5 @@ compactDialog.addEventListener('click',(e)=>{if(e.target===compactDialog)compact
 $('#printBtn').addEventListener('click',()=>{if(!compactDialog.open)compactDialog.showModal();setTimeout(()=>window.print(),120);});
 
 updateDetail(selectedIndex,false);
+activateSection('it');
 setTimeout(()=>$('#loading').classList.add('done'),reduceMotion?100:850);
